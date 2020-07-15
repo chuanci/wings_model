@@ -1,0 +1,5 @@
+{
+	"@import": "package:wings_model/enum/index.dart",
+	"pages": "$[]page",
+	"@JsonKey() List<Plugin>": "plugins"
+}

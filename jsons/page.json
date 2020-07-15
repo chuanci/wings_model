@@ -1,0 +1,8 @@
+{
+  "@import": "package:wings_model/enum/index.dart",
+  "name": "",
+  "route": "",
+  "@JsonKey() PageType":"type",
+  "effect": "$effect",
+  "reducer": "$reducer"
+}
