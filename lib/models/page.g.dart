@@ -62,4 +62,6 @@ T _$enumDecodeNullable<T>(
 const _$PageTypeEnumMap = {
   PageType.Common: 'Common',
   PageType.List: 'List',
+  PageType.Splash: 'Splash',
+  PageType.BottomNavigationBar: 'BottomNavigationBar',
 };

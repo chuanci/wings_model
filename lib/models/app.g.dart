@@ -12,6 +12,7 @@ App _$AppFromJson(Map<String, dynamic> json) {
         ?.map(
             (e) => e == null ? null : Page.fromJson(e as Map<String, dynamic>))
         ?.toList()
+    ..indexPageRoute = json['indexPageRoute'] as String
     ..plugins = (json['plugins'] as List)
         ?.map((e) => _$enumDecodeNullable(_$PluginEnumMap, e))
         ?.toList();
@@ -19,6 +20,7 @@ App _$AppFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$AppToJson(App instance) => <String, dynamic>{
       'pages': instance.pages,
+      'indexPageRoute': instance.indexPageRoute,
       'plugins': instance.plugins?.map((e) => _$PluginEnumMap[e])?.toList(),
     };
 

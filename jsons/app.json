@@ -1,5 +1,6 @@
 {
 	"@import": "package:wings_model/enum/index.dart",
 	"pages": "$[]page",
+	"indexPageRoute": "",
 	"@JsonKey() List<Plugin>": "plugins"
 }
