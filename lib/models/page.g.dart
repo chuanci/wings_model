@@ -17,7 +17,18 @@ Page _$PageFromJson(Map<String, dynamic> json) {
         : Effect.fromJson(json['effect'] as Map<String, dynamic>)
     ..reducer = json['reducer'] == null
         ? null
-        : Reducer.fromJson(json['reducer'] as Map<String, dynamic>);
+        : Reducer.fromJson(json['reducer'] as Map<String, dynamic>)
+    ..lifecycle = (json['lifecycle'] as List)
+        ?.map((e) => _$enumDecodeNullable(_$WingsLifecycleEnumMap, e))
+        ?.toList()
+    ..bottomBarPageConf = json['bottomBarPageConf'] == null
+        ? null
+        : BottomBarPageConf.fromJson(
+            json['bottomBarPageConf'] as Map<String, dynamic>)
+    ..splashPageConf = json['splashPageConf'] == null
+        ? null
+        : SplashPageConf.fromJson(
+            json['splashPageConf'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$PageToJson(Page instance) => <String, dynamic>{
@@ -27,6 +38,10 @@ Map<String, dynamic> _$PageToJson(Page instance) => <String, dynamic>{
       'type': _$PageTypeEnumMap[instance.type],
       'effect': instance.effect,
       'reducer': instance.reducer,
+      'lifecycle':
+          instance.lifecycle?.map((e) => _$WingsLifecycleEnumMap[e])?.toList(),
+      'bottomBarPageConf': instance.bottomBarPageConf,
+      'splashPageConf': instance.splashPageConf,
     };
 
 T _$enumDecode<T>(
@@ -66,4 +81,17 @@ const _$PageTypeEnumMap = {
   PageType.List: 'List',
   PageType.Splash: 'Splash',
   PageType.BottomNavigationBar: 'BottomNavigationBar',
+};
+
+const _$WingsLifecycleEnumMap = {
+  WingsLifecycle.initState: 'initState',
+  WingsLifecycle.didChangeDependencies: 'didChangeDependencies',
+  WingsLifecycle.build: 'build',
+  WingsLifecycle.reassemble: 'reassemble',
+  WingsLifecycle.didUpdateWidget: 'didUpdateWidget',
+  WingsLifecycle.deactivate: 'deactivate',
+  WingsLifecycle.dispose: 'dispose',
+  WingsLifecycle.appear: 'appear',
+  WingsLifecycle.disappear: 'disappear',
+  WingsLifecycle.didChangeAppLifecycleState: 'didChangeAppLifecycleState',
 };

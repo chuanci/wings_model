@@ -3,6 +3,5 @@ enum Plugin {
   OkToast,
   EasyRefresh,
   Logger,
-  Fson,
   WingsWidget,
 }

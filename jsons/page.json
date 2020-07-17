@@ -3,7 +3,10 @@
   "name": "",
   "className": "",
   "route": "",
-  "@JsonKey() PageType":"type",
+  "@JsonKey() PageType": "type",
   "effect": "$effect",
-  "reducer": "$reducer"
+  "reducer": "$reducer",
+  "@JsonKey() List<WingsLifecycle>": "lifecycle",
+  "bottomBarPageConf": "$bottomBarPageConf",
+  "splashPageConf": "$splashPageConf"
 }

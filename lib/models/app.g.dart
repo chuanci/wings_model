@@ -61,5 +61,5 @@ const _$PluginEnumMap = {
   Plugin.OkToast: 'OkToast',
   Plugin.EasyRefresh: 'EasyRefresh',
   Plugin.Logger: 'Logger',
-  Plugin.Fson: 'Fson',
+  Plugin.WingsWidget: 'WingsWidget',
 };

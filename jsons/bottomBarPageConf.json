@@ -1,0 +1,4 @@
+{
+  "@import": "package:wings_model/enum/index.dart",
+  "bottomItems": "$[]BottomItem"
+}
