@@ -6,14 +6,16 @@ part 'page.g.dart';
 
 @JsonSerializable()
 class Page {
-    Page();
+  Page();
 
-    String name;
-    String route;
-    @JsonKey() PageType type;
-    Effect effect;
-    Reducer reducer;
-    
-    factory Page.fromJson(Map<String,dynamic> json) => _$PageFromJson(json);
-    Map<String, dynamic> toJson() => _$PageToJson(this);
+  String name;
+  String className;
+  String route;
+  @JsonKey()
+  PageType type;
+  Effect effect;
+  Reducer reducer;
+
+  factory Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
+  Map<String, dynamic> toJson() => _$PageToJson(this);
 }

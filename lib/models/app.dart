@@ -5,12 +5,13 @@ part 'app.g.dart';
 
 @JsonSerializable()
 class App {
-    App();
+  App();
 
-    List<Page> pages;
-    String indexPageRoute;
-    @JsonKey() List<Plugin> plugins;
-    
-    factory App.fromJson(Map<String,dynamic> json) => _$AppFromJson(json);
-    Map<String, dynamic> toJson() => _$AppToJson(this);
+  List<Page> pages;
+  String indexPageRoute;
+  @JsonKey()
+  List<Plugin> plugins;
+
+  factory App.fromJson(Map<String, dynamic> json) => _$AppFromJson(json);
+  Map<String, dynamic> toJson() => _$AppToJson(this);
 }

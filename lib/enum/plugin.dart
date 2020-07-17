@@ -4,4 +4,5 @@ enum Plugin {
   EasyRefresh,
   Logger,
   Fson,
+  WingsWidget,
 }

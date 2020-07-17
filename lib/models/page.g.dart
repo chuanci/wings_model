@@ -9,6 +9,7 @@ part of 'page.dart';
 Page _$PageFromJson(Map<String, dynamic> json) {
   return Page()
     ..name = json['name'] as String
+    ..className = json['className'] as String
     ..route = json['route'] as String
     ..type = _$enumDecodeNullable(_$PageTypeEnumMap, json['type'])
     ..effect = json['effect'] == null
@@ -21,6 +22,7 @@ Page _$PageFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$PageToJson(Page instance) => <String, dynamic>{
       'name': instance.name,
+      'className': instance.className,
       'route': instance.route,
       'type': _$PageTypeEnumMap[instance.type],
       'effect': instance.effect,
